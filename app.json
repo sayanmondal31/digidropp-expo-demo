@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "digidropp-expo-demo",
+    "name": "Digidropp Expo Demo",
     "slug": "digidropp-expo-demo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,7 +15,9 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "online.digidropp.expodemo",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
