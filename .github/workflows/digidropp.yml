@@ -41,6 +41,7 @@ jobs:
         run: |
           mkdir -p ~/.android
           echo "$DIGIDROPP_DEBUG_KEYSTORE" | base64 -d > ~/.android/debug.keystore
+          cp ~/.android/debug.keystore android/app/debug.keystore
         env:
           DIGIDROPP_DEBUG_KEYSTORE: ${{ secrets.DIGIDROPP_DEBUG_KEYSTORE }}
       - name: Build APK
@@ -49,5 +50,5 @@ jobs:
         uses: digidropp/upload-action@v1
         with:
           api-token: ${{ secrets.DIGIDROPP_TOKEN }}
-          api-url: "https://digidropp.online/api"
+          api-url: "https://api.digidropp.online/api"
           file: "android/app/build/outputs/apk/release/app-release.apk"
